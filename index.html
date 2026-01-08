@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+<meta name="description" content="Retro Gamers – polska społeczność retro gier, Polish Street Simulator, przerabianie konsol PS1–PS5, Discord community.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPGM4CQR1Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VPGM4CQR1Q');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Retro Games - Polish Street Driving Community</title>
+    <style>
+.ps-menu {
+  list-style: none;
+}
+
+@media (max-width: 768px) {
+  .ps-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 220px;
+    background: #000;
+    padding: 15px;
+    z-index: 9999; /* 👈 BARDZO WAŻNE */
+  }
+
+  .ps-menu.active {
+    display: block;
+  }
+}
+
+/* TŁO + FONT */
+body {
+  background: radial-gradient(circle, #0b0f1a, #000);
+  color: #00eaff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* HEADER */
+.ps-header {
+  background: linear-gradient(180deg, #05080f, #000);
+  border-bottom: 2px solid #00eaff;
+}
+
+/* NAV */
+.ps-nav {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+/* LOGO */
+.ps-logo {
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px #00eaff;
+}
+
+/* MENU */
+.ps-menu {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin-left: auto;
+}
+
+/* LINKI */
+.ps-menu a {
+  color: #7df9ff;
+  text-decoration: none;
+  padding: 6px 12px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* PASEK PODŚWIETLENIA (PS2 STYLE) */
+.ps-menu a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 234, 255, 0.15);
+  opacity: 0;
+  transform: scaleX(0.8);
+  transition: 0.3s;
+}
+
+/* HOVER / FOCUS */
+.ps-menu a:hover::before,
+.ps-menu a.active::before {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.ps-menu a:hover,
+.ps-menu a.active {
+  color: #fff;
+  text-shadow: 0 0 8px #00eaff;
+}
+
+/* HAMBURGER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #00eaff;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .ps-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #000;
+    flex-direction: column;
+    width: 220px;
+    padding: 15px;
+    display: none;
+    border-left: 2px solid #00eaff;
+  }
+
+  .ps-menu.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-left: auto;
+}
+
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 15px #00ffcc, 0 0 30px #00ffcc;
+}
+
+body::before {
+  content:"";
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: repeating-linear-gradient(0deg, #0f0f0f 0px, #111 2px);
+  z-index:-1;
+  animation: gridMove 5s linear infinite;
+}
+
+@keyframes gridMove {
+  0% { background-position-y:0; }
+  100% { background-position-y:100px; }
+}
+
+.scorpion-character {
+  filter: drop-shadow(0 12px 6px rgba(0,0,0,0.9));
+  position:absolute;
+  z-index: 1000;
+  left: 39%;               /* domyślnie centrum */
+  transform: translateX(-50%);
+  top: -40px;             /* ⬆️ reguluje wysokość nad napisem */
+  width: 120px;            /* ⬇️ zmień, żeby był większy/mniejszy */
+  image-rendering: pixelated; /* zachowuje retro look */
+  animation: scorpionIdle 2s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero:hover .scorpion-character {
+  animation: scorpionJump 0.6s ease;
+}
+
+@keyframes scorpionJump {
+  0% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(-25px); }
+  100% { transform: translateX(-50%) translateY(0); }
+}
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+}
+
+/* NAPIS RGB – masz już */
+.rgb-text {
+  font-size: 64px;
+  margin-bottom: 40px;
+}
+
+/* CRASH */
+.crash-character {
+  filter: drop-shadow(0 12px 6px rgba(0,0,0,0.6));
+  position:absolute;
+  z-index: 1000;
+  right: 37%; 
+  transform: translateX(-50%);
+  top: -140px;          /* ⬆️ IM MNIEJ, TYM WYŻEJ */
+  width: 120px;         /* ⬇️ MNIEJSZY CRASH */
+  image-rendering: pixelated;
+  animation: crashIdle 2s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero {
+  position: relative;
+  text-align: center;
+  margin-top: 80px;
+  height: 200px; /* wysokość dla animacji */
+}
+@media (max-width:768px){
+  .scorpion-character {
+    width: 60px;
+    top: -40px;      /* podnieś na telefonie */
+    left: 10%;         /* dostosuj pozycję */
+    transform: translateX(-50%);
+  }
+}
+@media (max-width: 768px) {
+  .crash-character {
+    width: 60px;        /* mniejszy Crash na telefonie */
+    top: -80px;         /* podniesiony nad napis */
+  }
+}
+
+
+
+}
+
+/* SUBTITLE */
+.subtitle {
+  margin-top: 20px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.navbar {
+  background: #0b0b0b;
+  border-bottom: 2px solid #00ffcc;
+  box-shadow: 0 0 15px #00ffcc;
+}
+
+.nav-links a {
+  color: #e0e0e0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+}
+
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+/* TŁO STRONY */
+body {
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* KONTENER */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+/* NAGŁÓWKI */
+h1, h2, h3 {
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
+  margin-bottom: 15px;
+}
+
+/* PARAGRAFY */
+p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.rgb-text {
+  font-size: 48px;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+
+  background-size: 400% 400%; /* 🔥 TO JEST KLUCZ */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rgbMove 3s linear infinite;
+}
+
+@keyframes rgbMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+
+
+        body {
+            background-color: #111;
+            color: #eee;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #222;
+            text-align: center;
+            padding: 30px 10px;
+            border-bottom: 3px solid #444;
+        }
+        header h1 {
+            font-size: 48px;
+            color: #00ff80;
+            text-shadow: 0 0 10px #00ff80;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        h2 {
+            color: #00d4ff;
+            text-shadow: 0 0 6px #00d4ff;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .logo {
+            width: 300px;
+            display: block;
+            margin: 20px auto;
+        }
+        .discord-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 25px;
+            background-color: #5865F2;
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .discord-btn:hover {
+            background-color: #4752C4;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: #777;
+            border-top: 1px solid #333;
+        }
+/* ===== WERSJA MOBILNA ===== */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    p, li {
+        font-size: 16px;
+    }
+
+    .discord-btn, .back-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        padding: 14px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+    /* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 20px;
+}
+
+.logo-nav {
+    color: #00ff80;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: #eee;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    color: #00d4ff;
+}
+
+/* ===== HAMBURGER ===== */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #222;
+        position:absolute;
+        z-index: 10000;
+        top: 65px;
+        left: 0;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        border-top: 1px solid #333;
+        margin: 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+  </style>
+</head>
+<body>
+<div id="cookieBanner" style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #00eaff;
+  padding: 15px;
+  text-align: center;
+  display: none;
+  z-index: 9999;
+">
+  Ta strona używa plików cookie do celów statystycznych.
+  <button onclick="acceptCookies()">Akceptuję</button>
+  <button onclick="rejectCookies()">Odrzuć</button>
+</div>
+
+
+<header>
+ <nav class="ps-nav">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="ps-logo">Retro Games</div>
+
+  <ul class="ps-menu" id="navLinks">
+    <li><a href="index.html">Strona główna</a></li>
+    <li><a href="Konsole.html">Konsole</a></li>
+    <li><a href="https://discord.gg/emT8DYrt" target="_blank">Discord</a></li>
+  </ul>
+</nav>
+
+</header>
+
+
+<div class="hero">
+  <h1 class="rgb-text">Retro Games</h1>
+
+  <!-- CRASH -->
+  <img src="crash_ps1.png" alt="Crash Bandicoot PS1"class="crash-character">
+  
+  <!-- SCORPION -->
+  <img src="scorpion.png" alt="Scorpion" class="scorpion-character">
+       
+     
+  <p class="subtitle">& Polish Street Simulator Community</p>
+</div>
+
+</header>
+
+  <header>Co oferujemy:</header>
+<ul>
+  <li>🎮 Community Polish Street Simulator</li>
+  <li>🔧 Pomoc w przerabianiu konsol</li>
+  <li>💬 Aktywna społeczność Discord</li>
+  <li>🛠️ Poradniki i wsparcie techniczne</li>
+</ul>
+<div class="container">
+    <h2>Polish Street Simulator Community</h2>
+  <img src="pss_logo.png" width="150" height="150"> 
+         
+    <p>Witaj w oficjalnej społeczności graczy <strong>Polish Street Simulator</strong>!  
+    To miejsce dla fanów retro klimatu, motoryzacji, tuningowania oraz unikalnych projektów tworzonych przez polską społeczność.</p>
+
+    <p>Dołącz do nas, poznaj ekipę, podziel się swoimi pomysłami, graj razem z innymi i bierz udział w eventach!</p>
+    <h3>Link do gry będzie jak skończymy pierwsze prace</h3>
+<h2>Aktualności</h2>
+<div class="news-card">
+  <h3>Nowy event community</h3>
+  <p>Wkrótce!</p>
+</div>
+<div class="news-card">
+  <h3>Nowe aktualizacje gry</h3>
+  <p>Wkrótce!</p>
+</div>
+<div class="showcase">
+  <div class="showcase-item"><img src="car1.png"><div class="overlay">Samochód 1 - Wkrótce!</div></div>
+  <div class="showcase-item"><img src="car2.png"><div class="overlay">Samochód 2 - Wkrótce!</div></div>
+</div>
+
+    
+    <h2>Pomagamy przerabiać konsole</h2>
+    <img src="Retro_Games_logo.png" width="150" height="150">
+    <p>W naszej społeczności znajdziesz również osoby, które znają się na przerabianiu różnych konsol — od klasycznych retro sprzętów po nowsze generacje.  
+    Doradzimy, pomożemy i podpowiemy, jak najlepiej wykorzystać potencjał Twojej konsoli.</p>
+    <h2>FAQ</h2>
+<p><strong>Czy przeróbka jest bezpieczna?</strong><br>Tak, jeśli jest robiona poprawnie.</p>
+<p><strong>Czy mogę dostać bana za przerobienie konsoli?</strong><br>Tak, dlatego należy przerabiać jeśli straci wsparcie internetowe.<p>
+
+    <table border="1"><br>Na discordzie poniżej znajdziecie poradniki.
+    <br><br>
+
+<a class="discord-btn" href="Konsole.html" style="background-color:purple; color:white;">
+    Zobacz jakie konsole przerabiamy
+</a>
+   <h2>Aktualności</h2>
+<p>🆕 Strona wystartowała — zapraszamy na Discord!</p>
+   <ul>
+  <li>✔ Doświadczenie community</li>
+  <li>✔ Darmowa pomoc</li>
+  <li>✔ Retro + nowoczesne konsole</li>
+</ul>
+
+
+    <br><br>
+    <a class="discord-btn" href="https://discord.gg/emT8DYrt" target="_blank">
+        Dołącz na Discord
+    </a>
+</div>
+
+<footer>
+    © 2025 Retro Games — Polish Street Driving Community
+</footer>
+<h1>Polityka prywatności</h1>
+<p>
+Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych
+(Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.
+</p>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+// aktywna strona
+const links = document.querySelectorAll(".ps-menu a");
+const current = location.pathname.split("/").pop();
+
+links.forEach(link => {
+  if (
+    link.getAttribute("href") === current ||
+    (current === "" && link.getAttribute("href") === "index.html")
+  ) {
+    link.classList.add("active");
+  }
+});
+</script>
+<script>
+function acceptCookies() {
+  document.cookie = "stats_cookies=true; max-age=" + 60*60*24*365 + "; path=/";
+  document.getElementById("cookieBanner").style.display = "none";
+  loadAnalytics();
+}
+
+function hasConsent() {
+  return document.cookie.includes("stats_cookies=true");
+}
+
+function loadAnalytics() {
+  const script = document.createElement("script");
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P8HGCC01F4');
+}
+
+window.onload = () => {
+  if (hasConsent()) {
+    loadAnalytics();
+  } else {
+    document.getElementById("cookieBanner").style.display = "block";
+  }
+};
+</script>
+
+
+</body>
+</html>
