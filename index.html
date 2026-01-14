@@ -540,9 +540,9 @@ p {
   display: none;
   z-index: 9999;
 ">
-  Ta strona używa plików cookie do celów statystycznych.
-  <button onclick="acceptCookies()">Akceptuję</button>
-  <button onclick="rejectCookies()">Odrzuć</button>
+  <p data-i18n="cookies">Ta strona używa plików cookie do celów statystycznych.</p>
+  <button onclick="acceptCookies()" data-i18n="accept">Akceptuję</button>
+  <button onclick="rejectCookies()" data-i18n="reject">Odrzuć</button>
 </div>
 
 
@@ -553,9 +553,11 @@ p {
   <div class="ps-logo">Retro Games</div>
 
   <ul class="ps-menu" id="navLinks">
-    <li><a href="index.html">Strona główna</a></li>
-    <li><a href="Konsole.html">Konsole</a></li>
-    <li><a href="https://discord.gg/emT8DYrt" target="_blank">Discord</a></li>
+    <li><a href="index.html" data-i18n="nav_home">Strona główna</a></li>
+    <li><a href="Konsole.html" data-i18n="nav_consoles">Konsole</a></li>
+    <li><a href="https://discord.gg/emT8DYrt" data-i18n="nav_discord"target="_blank">Discord</a></li>
+    <li><button onclick="setLanguage('pl')">PL</button> <button onclick="setLanguage('en')">EN</button>
+
   </ul>
 </nav>
 
@@ -584,62 +586,61 @@ p {
 
 </header>
 
-  <header>Co oferujemy:</header>
+  <header data-i18n="offer_title">Co oferujemy:</header>
 <ul>
-  <li>🎮 Community Polish Street Simulator</li>
-  <li>🔧 Pomoc w przerabianiu konsol</li>
-  <li>💬 Aktywna społeczność Discord</li>
-  <li>🛠️ Poradniki i wsparcie techniczne</li>
+  <li data-i18n="offer_1">🎮 Community Polish Street Simulator</li>
+  <li data-i18n="offer_2">🔧 Pomoc w przerabianiu konsol</li>
+  <li data-i18n="offer_3">💬 Aktywna społeczność Discord</li>
+  <li data-i18n="offer_4">🛠️ Poradniki i wsparcie techniczne</li>
 </ul>
 <div class="container">
     <h2>Polish Street Simulator Community</h2>
   <img src="pss_logo.png" width="150" height="150"> 
          
-    <p>Witaj w oficjalnej społeczności graczy <strong>Polish Street Simulator</strong>!  
+    <p data-i18n="welcome_p1">Witaj w oficjalnej społeczności graczy <strong>Polish Street Simulator</strong>!  
     To miejsce dla fanów retro klimatu, motoryzacji, tuningowania oraz unikalnych projektów tworzonych przez polską społeczność.</p>
 
-    <p>Dołącz do nas, poznaj ekipę, podziel się swoimi pomysłami, graj razem z innymi i bierz udział w eventach!</p>
-    <h3>Link do gry będzie jak skończymy pierwsze prace</h3>
-<h2>Aktualności</h2>
+    <p data-i18n="welcome_p2">Dołącz do nas, poznaj ekipę, podziel się swoimi pomysłami, graj razem z innymi i bierz udział w eventach!</p>
+    <h3 data-i18n="game_link">Link do gry będzie jak skończymy pierwsze prace</h3>
+<h2 data-i18n="news">Aktualności</h2>
 <div class="news-card">
-  <h3>Nowy event community</h3>
-  <p>Wkrótce!</p>
+  <h3 data-i18n="community_event">Nowy event community</h3>
+  <p data-i18n="soon">Wkrótce!</p>
 </div>
 <div class="news-card">
-  <h3>Nowe aktualizacje gry</h3>
-  <p>Wkrótce!</p>
+  <h3 data-i18n="updates">Nowe aktualizacje gry</h3>
+  <p data-i18n="soon">Wkrótce!</p>
 </div>
 <div class="showcase">
-  <div class="showcase-item"><img src="car1.png"><div class="overlay">Samochód 1 - Wkrótce!</div></div>
-  <div class="showcase-item"><img src="car2.png"><div class="overlay">Samochód 2 - Wkrótce!</div></div>
-</div>
+  <div class="overlay"><h3 data-i18n="whats_new">Co Nowego?</h3><div class="showcase-item"><img src="car1.png" width="300" height="200"> </div></div>
+  <div class="overlay"><h3>Screenshot</h3><div class="showcase-item"><img src="car2.png" width="300" height="200"> </div></div>
 
     
-    <h2>Pomagamy przerabiać konsole</h2>
+    <h2 data-i18n="consoles_help_title">Pomagamy przerabiać konsole</h2>
     <img src="Retro_Games_logo.png" width="150" height="150">
-    <p>W naszej społeczności znajdziesz również osoby, które znają się na przerabianiu różnych konsol — od klasycznych retro sprzętów po nowsze generacje.  
+    <p data-i18n="consoles_community">W naszej społeczności znajdziesz również osoby, które znają się na przerabianiu różnych konsol — od klasycznych retro sprzętów po nowsze generacje.  
     Doradzimy, pomożemy i podpowiemy, jak najlepiej wykorzystać potencjał Twojej konsoli.</p>
     <h2>FAQ</h2>
-<p><strong>Czy przeróbka jest bezpieczna?</strong><br>Tak, jeśli jest robiona poprawnie.</p>
-<p><strong>Czy mogę dostać bana za przerobienie konsoli?</strong><br>Tak, dlatego należy przerabiać jeśli straci wsparcie internetowe.<p>
+<p><strong data-i18n="question_1">Czy przeróbka jest bezpieczna?</strong></p><p data-i18n="answer_1">Tak, jeśli jest robiona poprawnie.</p>
+<p><strong data-i18n="question_2">Czy mogę dostać bana za przerobienie konsoli?</strong></p><p data-i18n="answer_2">Tak, dlatego należy przerabiać jeśli straci wsparcie internetowe.</p>
 
-    <table border="1"><br>Na discordzie poniżej znajdziecie poradniki.
-    <br><br>
+    <table border="1"><strong><p data-i18n="discord_below">Na discordzie poniżej znajdziecie poradniki.
+    </p></strong><br>
 
-<a class="discord-btn" href="Konsole.html" style="background-color:purple; color:white;">
+<a class="discord-btn" data-i18n="see_consoles" href="Konsole.html" style="background-color:purple; color:white;">
     Zobacz jakie konsole przerabiamy
 </a>
-   <h2>Aktualności</h2>
-<p>🆕 Strona wystartowała — zapraszamy na Discord!</p>
+   <h2 data-i18n="news">Aktualności</h2>
+
    <ul>
-  <li>✔ Doświadczenie community</li>
-  <li>✔ Darmowa pomoc</li>
-  <li>✔ Retro + nowoczesne konsole</li>
+  <li data-i18n="community_exp">✔ Doświadczenie community</li>
+  <li data-i18n="free_help">✔ Darmowa pomoc</li>
+  <li data-i18n="retro_gen">✔ Retro + nowoczesne konsole</li>
 </ul>
 
 
     <br><br>
-    <a class="discord-btn" href="https://discord.gg/emT8DYrt" target="_blank">
+    <a class="discord-btn" data-i18n="join_discord" href="https://discord.gg/emT8DYrt" target="_blank">
         Dołącz na Discord
     </a>
 </div>
@@ -647,11 +648,14 @@ p {
 <footer>
     © 2025 Retro Games — Polish Street Simulator Community
 </footer>
-<h1>Polityka prywatności</h1>
-<p>
+<h1 data-i18n="privacy_title">Polityka prywatności</h1>
+<p data-i18n="privacy_text">
 Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych
 (Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.
 </p>
+
+<script src="i18n.js"></script>
+
 
 <script>
 function toggleMenu() {
