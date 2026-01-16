@@ -48,7 +48,53 @@ const translations = {
     
 
     privacy_title: "Polityka prywatności",
-    privacy_text: "Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych."
+    privacy_text: "Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych.",
+
+
+    // === KONSOLE ===
+what_consoles: "Jakie konsole potrafimy przerobić?",
+consoles_title: "Przerabiane konsole",
+modify_info: "W społeczności Retro Games pomagamy w modyfikacji konsol PlayStation — zarówno starszych, jak i nowszych generacji.",
+safe: "🟢 Bezpieczna",
+partial: "🟡 Częściowa",
+limited: "🔴 Ograniczona",
+consoles_desc: "Przeróbki konsol",
+ps_models_title: "Obsługiwane modele konsol",
+selected: "(wybrane wersje)",
+
+ps1: "Status: 🟢 Bezpieczna przeróbka ",
+ps1_method: "Metody: softmod, uruchamianie gier z kopii zapasowych.",
+ps2: "Status: 🟢 Bezpieczna przeróbka",
+ps2_method: "Metody: FreeMCBoot, OPL, gry z USB/HDD.",
+ps3: "Status: 🟢 Bezpieczna przeróbka",
+ps3_method: "Metody: Custom firmware, backup gier, emulator retro.",
+psp: "Status: 🟢 Bezpieczna przeróbka",
+psp_method: "Metody: custom firmware, uruchamianie kopii gier z karty pamięci.",
+psv: "Status: 🟡 Częściowa przeróbka",
+psv_method: "Metody: HENkaku, uruchamianie homebrew i emulatorów retro.",
+ps4: "Status: 🟡 Częściowa przeróbka",
+ps4_method: "Ograniczenia: nowe aktualizacje systemu mogą blokować przeróbki.",
+ps5: "Status: 🔴 Ograniczona przeróbka",
+ps5_method: "Przeróbki są eksperymentalne i niezalecane.",
+
+facts: "Ciekawostki o konsolach",
+facts_ps1: "PlayStation pierwotnie nie miało powstać – Sony współpracowało z Nintendo przy projekcie SNES-CD, ale projekt upadł, a Sony stworzyło własną konsolę.",
+facts_ps2: "PS2 jest najlepiej sprzedającą się konsolą w historii – ponad 155 milionów sztuk na całym świecie!",
+facts_ps3: "PS3 miało kosztować prawie 600 dolarów przy premierze w USA – jedna z najdroższych konsol na start.",
+facts_psp: "PSP było pierwszą przenośną konsolą Sony z możliwością odtwarzania filmów UMD.",
+facts_psv: "PS Vita posiadała dwa analogowe drążki – jedyne wśród przenośnych konsol Sony.",
+facts_ps4: "PS4 początkowo nie obsługiwało wstecznej kompatybilności z grami z PS3 – wymagało emulacji lub streamingu.",
+facts_ps5: "PS5 posiada ultrawydajny dysk SSD, który skraca czas ładowania gier do minimum.",
+
+qa_title: "Pytania i odpowiedzi",
+qa_q1: "Czy przerabianie konsol jest legalne?",
+qa_a1: "Modyfikacje sprzętowe są legalne, ale korzystanie z pirackiego oprogramowania – nie.",
+qa_q2: "Czy mogę grać online po przeróbce?",
+qa_a2: "Zależy od konsoli i rodzaju modyfikacji.",
+qa_q3: "Czy pomagacie z instalacją gier?",
+qa_a3: "Pomagamy wyłącznie z legalnym oprogramowaniem i kopiami zapasowymi."
+
+   
   },
 
   en: {
@@ -99,7 +145,53 @@ const translations = {
     retro_gen: "✔ Retro + modern consoles", 
 
     privacy_title: "Privacy Policy",
-    privacy_text: "Retro Games uses cookies only for anonymous statistics."
+    privacy_text: "Retro Games uses cookies only for anonymous statistics.",
+
+ 
+    // KONSOLE
+what_consoles: "What consoles can we modify?",    
+consoles_title: "Modified consoles",
+modify_info: "In the Retro Games community, we help modify PlayStation consoles - both older and newer generations.",
+safe: "🟢 Safe",
+partial: "🟡 Partial",
+limited: "🔴 Restricted",
+consoles_desc: "Console modifications",
+ps_models_title: "Supported console models",
+selected: "(Selected versions)",
+
+ps1: "Status: 🟢 Safe Mod",
+ps1_method: "Methods: Softmod, Running Games from Backups.",
+ps2: "Status: 🟢 Safe Mod",
+ps2_method: "Methods: FreeMCBoot, OPL, Games from USB/HDD.",
+ps3: "Status: 🟢 Safe Mod",
+ps3_method: "Methods: Custom firmware, game backup, retro emulator.",
+psp: "Status: 🟢 Safe Mod",
+psp_method: "Methods: Custom firmware, running game copies from a memory card.",
+psv: "Status: 🟡 Partial Mod",
+psv_method: "Methods: HENkaku, running homebrew and retro emulators.",
+ps4: "Status: 🟡 Partial Mod",
+ps4_method: "Limitations: New system updates may block modifications.",
+ps5: "Status: 🔴 Restricted Mod",
+ps5_method: "The modifications are experimental and not recommended.",
+
+facts: "Facts about consoles",
+facts_ps1: "The PlayStation was not originally supposed to be created – Sony collaborated with Nintendo on the SNES-CD project, but the project fell through and Sony created its own console.",
+facts_ps2: "PS2 is the best-selling console in history – over 155 million units worldwide!",
+facts_ps3: "The PS3 was expected to cost nearly $600 at launch in the US – one of the most expensive consoles to launch.",
+facts_psp: "The PSP was Sony's first portable console with the ability to play UMD movies.",
+facts_psv: "The PS Vita had two analog sticks – unique among Sony's portable consoles.",
+facts_ps4: "The PS4 did not initially support backward compatibility with PS3 games – it required emulation or streaming.",
+facts_ps5: "The PS5 has an ultra-efficient SSD that reduces game loading times to a minimum",
+
+qa_title: "Questions & Answers",
+qa_q1: "Is console modding legal?",
+qa_a1: "Hardware modifications are legal, but using pirated software is not.",
+qa_q2: "Can I play online after modding?",
+qa_a2: "It depends on the console and the type of modification.",
+qa_q3: "Do you help with game installation?",
+qa_a3: "We only assist with legal software and backup copies.",
+    
+
   }
 };
 

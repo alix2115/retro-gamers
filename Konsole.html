@@ -393,9 +393,9 @@ p {
   display: none;
   z-index: 9999;
 ">
-  Ta strona używa plików cookie do celów statystycznych.
-  <button onclick="acceptCookies()">Akceptuję</button>
-  <button onclick="rejectCookies()">Odrzuć</button>
+ <p data-i18n="cookies">Ta strona używa plików cookie do celów statystycznych.</p>
+  <button onclick="acceptCookies()" data-i18n="accept">Akceptuję</button>
+  <button onclick="rejectCookies()" data-i18n="reject">Odrzuć</button>
 </div>
 
 
@@ -404,17 +404,19 @@ p {
   <div class="logo-nav">Retro Games</div>
   <div class="hamburger" onclick="toggleMenu()">☰</div>
   <div class="nav-links" id="navLinks">
-      <a href="https://alix2115.github.io/retro-gamers/">Strona główna</a>
+      <a href="https://alix2115.github.io/retro-gamers/" data-i18n="nav_home">Strona główna</a>
       <a href="https://discord.gg/emT8DYrt" target="_blank">Discord</a>
+      <a><button onclick="setLanguage('pl')" style="background-color:blue; color:white;">PL</button> <button onclick="setLanguage('en')" style="background-color:blue; color:white;">EN</button></a>
+
   </div>
 </nav>
-    <h1>Przerabianie Konsol</h1>
+    <h1 data-i18n="consoles_title">Przerabianie Konsol</h1>
 </header>
 
 <div class="container">
-    <h2>Jakie konsole potrafimy przerobić?</h2>
+    <h2 data-i18n="what_consoles">Jakie konsole potrafimy przerobić?</h2>
 
-    <p>W społeczności <strong>Retro Games</strong> pomagamy w modyfikacji konsol PlayStation — zarówno starszych, jak i nowszych generacji.</p>
+    <p data-i18n="modify_info">W społeczności <strong>Retro Games</strong> pomagamy w modyfikacji konsol PlayStation — zarówno starszych, jak i nowszych generacji.</p>
   <div>     
     <img src="ps1.png" width="100" height=100;>
     <img src="ps2.png" width="100" height="100">
@@ -425,58 +427,58 @@ p {
     <img src="ps5.png" width="100" height="100">
   </div>
 <ul>
-  <li>🟢 Bezpieczna</li>
-  <li>🟡 Częściowa</li>
-  <li>🔴 Ograniczona</li>
+  <li data-i18n="safe">🟢 Bezpieczna</li>
+  <li data-i18n="partial">🟡 Częściowa</li>
+  <li data-i18n="limited">🔴 Ograniczona</li>
 </ul>
 
-<h2>Przeróbki konsol</h2>
+<h2 data-i18n="consoles_desc">Przeróbki konsol</h2>
 
 <div class="accordion">
   <button class="accordion-btn">PS1</button>
   <div class="panel">
-    <p>Status: 🟢 Bezpieczna przeróbka</p>
-    <p>Metody: softmod, uruchamianie gier z kopii zapasowych.</p>
+    <p data-i18n="ps1">Status: 🟢 Bezpieczna przeróbka</p>
+    <p data-i18n="ps1_method">Metody: softmod, uruchamianie gier z kopii zapasowych.</p>
   </div>
 
   <button class="accordion-btn">PS2</button>
   <div class="panel">
-    <p>Status: 🟢 Bezpieczna przeróbka</p>
-    <p>Metody: FreeMCBoot, OPL, gry z USB/HDD.</p>
+    <p data-i18n="ps2">Status: 🟢 Bezpieczna przeróbka</p>
+    <p data-i18n="ps2_method">Metody: FreeMCBoot, OPL, gry z USB/HDD.</p>
   </div>
 
   <button class="accordion-btn">PS3</button>
   <div class="panel">
-    <p>Status: 🟢 Bezpieczna przeróbka</p>
-    <p>Metody: Custom firmware, backup gier, emulator retro.</p>
+    <p data-i18n="ps3">Status: 🟢 Bezpieczna przeróbka</p>
+    <p data-i18n="ps3_method">Metody: Custom firmware, backup gier, emulator retro.</p>
   </div>
 
   <button class="accordion-btn">PSP</button>
   <div class="panel">
-    <p>Status: 🟢 Bezpieczna przeróbka</p>
-    <p>Metody: custom firmware, uruchamianie kopii gier z karty pamięci.</p>
+    <p data-i18n="psp">Status: 🟢 Bezpieczna przeróbka</p>
+    <p data-i18n="psp_method">Metody: custom firmware, uruchamianie kopii gier z karty pamięci.</p>
   </div>
 
   <button class="accordion-btn">PS Vita</button>
   <div class="panel">
-    <p>Status: 🟡 Częściowa przeróbka</p>
-    <p>Metody: HENkaku, uruchamianie homebrew i emulatorów retro.</p>
+    <p data-i18n="psv">Status: 🟡 Częściowa przeróbka</p>
+    <p data-i18n="psv_method">Metody: HENkaku, uruchamianie homebrew i emulatorów retro.</p>
   </div>
 
   <button class="accordion-btn">PS4</button>
   <div class="panel">
-    <p>Status: 🟡 Częściowa przeróbka</p>
-    <p>Ograniczenia: nowe aktualizacje systemu mogą blokować przeróbki.</p>
+    <p data-i18n="ps4">Status: 🟡 Częściowa przeróbka</p>
+    <p data-i18n="ps4_method">Ograniczenia: nowe aktualizacje systemu mogą blokować przeróbki.</p>
   </div>
 
   <button class="accordion-btn">PS5</button>
   <div class="panel">
-    <p>Status: 🔴 Ograniczona przeróbka</p>
-    <p>Przeróbki są eksperymentalne i niezalecane.</p>
+    <p data-i18n="ps5">Status: 🔴 Ograniczona przeróbka</p>
+    <p data-i18n="ps5_method">Przeróbki są eksperymentalne i niezalecane.</p>
   </div>
 </div>
 <section class="consoles">
-  <h2 class="rgb-text">Obsługiwane konsole</h2>
+  <h2 class="rgb-text" data-i18n="ps_models_title">Obsługiwane konsole</h2>
 
   <details>
     <summary>🎮 PlayStation 1 (PS1)</summary>
@@ -505,7 +507,7 @@ p {
       <li>SCPH-75000</li>
       <li>SCPH-77000</li>
       <li>SCPH-79000</li>
-      <li>SCPH-90000 (wybrane wersje)</li>
+      <li>SCPH-90000 <strong data-i18n="selected">(wybrane wersje)</strong></li>
     </ul>
   </details>
 
@@ -558,46 +560,46 @@ p {
 
 </section>
 
-<h2>Ciekawostki o konsolach</h2>
+<h2 data-i18n="facts">Ciekawostki o konsolach</h2>
 
 <div class="trivia">
   <div class="trivia-item">
     <h3>PS1</h3>
-    <p>PlayStation pierwotnie nie miało powstać – Sony współpracowało z Nintendo przy projekcie SNES-CD, ale projekt upadł, a Sony stworzyło własną konsolę.</p>
+    <p data-i18n="facts_ps1">PlayStation pierwotnie nie miało powstać – Sony współpracowało z Nintendo przy projekcie SNES-CD, ale projekt upadł, a Sony stworzyło własną konsolę.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS2</h3>
-    <p>PS2 jest najlepiej sprzedającą się konsolą w historii – ponad 155 milionów sztuk na całym świecie!</p>
+    <p data-i18n="facts_ps2">PS2 jest najlepiej sprzedającą się konsolą w historii – ponad 155 milionów sztuk na całym świecie!</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS3</h3>
-    <p>PS3 miało kosztować prawie 600 dolarów przy premierze w USA – jedna z najdroższych konsol na start.</p>
+    <p data-i18n="facts_ps3">PS3 miało kosztować prawie 600 dolarów przy premierze w USA – jedna z najdroższych konsol na start.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PSP</h3>
-    <p>PSP było pierwszą przenośną konsolą Sony z możliwością odtwarzania filmów UMD.</p>
+    <p data-i18n="facts_psp">PSP było pierwszą przenośną konsolą Sony z możliwością odtwarzania filmów UMD.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS Vita</h3>
-    <p>PS Vita posiadała dwa analogowe drążki – jedyne wśród przenośnych konsol Sony.</p>
+    <p data-i18n="facts_psv">PS Vita posiadała dwa analogowe drążki – jedyne wśród przenośnych konsol Sony.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS4</h3>
-    <p>PS4 początkowo nie obsługiwało wstecznej kompatybilności z grami z PS3 – wymagało emulacji lub streamingu.</p>
+    <p data-i18n="facts_ps4">PS4 początkowo nie obsługiwało wstecznej kompatybilności z grami z PS3 – wymagało emulacji lub streamingu.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS5</h3>
-    <p>PS5 posiada ultrawydajny dysk SSD, który skraca czas ładowania gier do minimum.</p>
+    <p data-i18n="facts_ps5">PS5 posiada ultrawydajny dysk SSD, który skraca czas ładowania gier do minimum.</p>
   </div>
 </div>
 
-  <h2>Q&A / FAQ</h2>
+  <h2>Q&A</h2>
 <div class="faq-accordion">
   <button class="faq-btn">Czy mogę uszkodzić konsolę podczas przeróbki?</button>
   <div class="faq-panel">
@@ -648,6 +650,9 @@ p {
     <h2>FAQ</h2>
 <p><strong>Czy przeróbka PS5 jest bezpieczna?</strong><br>
 Zależy od wersji systemu.</p>
+<br><br>
+<p><strong>Jak i skąd pobrać gry które są możliwe do pobrania z licencją?</strong><br>
+Gry do pobrania znajdziesz nad napisem FAQ lecz potrzebna jest przeróbka konsoli którą pomożemy ci zrobić na naszym discordzie.♡</p>
 
     <a class="back-btn" href="https://alix2115.github.io/retro-gamers/" style="background-color:purple; color:white;">← Powrót do strony głównej</a>
 <p><small>
@@ -673,6 +678,9 @@ Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznyc
 </p>
 
 </footer>
+
+<script src="i18n.js"></script>
+
 <script>
 const acc = document.getElementsByClassName("accordion-btn");
 for(let i=0;i<acc.length;i++){
