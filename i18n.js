@@ -37,7 +37,7 @@ const translations = {
     question_1: "Czy przeróbka jest bezpieczna?", 
     answer_1: "Tak, jeśli jest robiona poprawnie.",
     question_2: "Czy mogę dostać bana za przerobienie konsoli?",
-    answer_2: "Tak, dlatego naleśy przerabiać jeśli straci wsparcie internetowe.",
+    answer_2: "Tak, dlatego należy przerabiać jeśli straci wsparcie internetowe.",
 
     discord_below: "Na discordzie poniżej znajdziecie poradniki.",
     join_discord: "Dołącz na Discord",
@@ -87,12 +87,52 @@ facts_ps4: "PS4 początkowo nie obsługiwało wstecznej kompatybilności z grami
 facts_ps5: "PS5 posiada ultrawydajny dysk SSD, który skraca czas ładowania gier do minimum.",
 
 qa_title: "Pytania i odpowiedzi",
-qa_q1: "Czy przerabianie konsol jest legalne?",
-qa_a1: "Modyfikacje sprzętowe są legalne, ale korzystanie z pirackiego oprogramowania – nie.",
-qa_q2: "Czy mogę grać online po przeróbce?",
-qa_a2: "Zależy od konsoli i rodzaju modyfikacji.",
-qa_q3: "Czy pomagacie z instalacją gier?",
-qa_a3: "Pomagamy wyłącznie z legalnym oprogramowaniem i kopiami zapasowymi."
+qa_q1: "Czy mogę uszkodzić konsolę podczas przeróbki?",
+qa_a1: "Tak, istnieje ryzyko, dlatego zawsze zalecamy dokładne instrukcje i wykonywanie przeróbek tylko zgodnie z poradnikami. Nie odpowiadamy za uszkodzenia sprzętu.",
+
+qa_q2: "Czy przeróbki są legalne?",
+qa_a2: "Przeróbki sprzętowe są legalne, jeśli nie obejmują nielegalnego oprogramowania lub pirackich gier. Pomagamy wyłącznie w modyfikacji sprzętu i homebrew.",
+
+qa_q3: "Czy mogę online korzystać z przerobionej konsoli?",
+qa_a3: "Nie zawsze – niektóre modyfikacje mogą zostać wykryte przez sieć i prowadzić do ograniczeń online. Zalecamy sprawdzanie aktualnych zasad producenta.",
+
+qa_q4: "Jak mogę dowiedzieć się więcej?",
+qa_a4: "Dołącz do naszego Discorda, gdzie udostępniamy poradniki, instrukcje i pomoc od społeczności.",
+
+
+why: "Dlaczego my?",
+doswiadczenie: "✔ Doświadczenie",
+pomoc: "✔ Pomoc community",
+brak: "✔ Brak opłat",
+
+
+
+donot: "Czego nie robimy?",
+sell: "❌ Nie sprzedajemy gier",
+online: "❌ Nie omijamy zabezpieczeń online",
+
+process: "Jak wygląda proces?",
+st: "Kontakt na Discordzie",
+nd: "Sprawdzenie wersji systemu",
+rd: "Instrukcja krok po kroku",
+
+config: "Pomagamy z softmodem, custom firmware, uruchamianiem gier, konfiguracją gier, emulatorami oraz konfiguracją systemu.",
+
+games: "Do pobierania gier polecamy stronke",
+games1: "Albo stronke",
+
+fq_q: "Czy przeróbka PS5 jest bezpieczna?",
+fq_a: "Zależy od wersji systemu.",
+fq_q1: "Jak i skąd pobrać gry które są możliwe do pobrania z licencją?",
+fq_a1: "Gry do pobrania znajdziesz nad napisem FAQ lecz potrzebna jest przeróbka konsoli którą pomożemy ci zrobić na naszym discordzie.♡",
+
+main: "← Powrót do strony głównej",
+pirat: "Nie zachęcamy do piractwa. Pomagamy wyłącznie w modyfikacji sprzętu.",
+wrong: "Nie odpowiadamy za błędne modyfikacje sprzętu. Pomagamy wyłącznie informacyjnie.",
+modded: "⚠️ Przeróbki wykonujesz na własną odpowiedzialność. Nie wspieramy piractwa.",
+
+info_cookie: "Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych (Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.",
+
 
    
   },
@@ -184,12 +224,52 @@ facts_ps4: "The PS4 did not initially support backward compatibility with PS3 ga
 facts_ps5: "The PS5 has an ultra-efficient SSD that reduces game loading times to a minimum",
 
 qa_title: "Questions & Answers",
-qa_q1: "Is console modding legal?",
-qa_a1: "Hardware modifications are legal, but using pirated software is not.",
-qa_q2: "Can I play online after modding?",
-qa_a2: "It depends on the console and the type of modification.",
-qa_q3: "Do you help with game installation?",
-qa_a3: "We only assist with legal software and backup copies.",
+qa_q1: "Can I damage my console while modifying it?",
+qa_a1: "Yes, there are risks, so we always recommend following the instructions carefully and only performing modifications as directed. We are not responsible for any damage to your equipment.",
+
+qa_q2: "Are modifications legal?",
+qa_a2: "Hardware modifications are legal as long as they don't involve illegal software or pirated games. We only support hardware modifications and homebrew.",
+
+qa_q3: "Can I use a modified console online?",
+qa_a3: "Not always – some modifications may be detected by the network and lead to online restrictions. We recommend checking the manufacturer's current policies.",
+
+qa_q4: "How can I find out more?",
+qa_a4: "Join our Discord where we share guides, instructions, and help from the community.",
+
+
+why: "Why us?",
+doswiadczenie: "✔ Experience",
+pomoc: "✔ Community help",
+brak: "✔ No fees",
+
+
+donot: "What we don't do",
+sell: "❌ We do not sell games",
+online: "❌ We don't bypass online security",
+
+process: "What does the process look like?",
+st: "Contact on Discord",
+nd: "Checking the system version",
+rd: "Step by step instructions",
+
+config: "We help with softmod, custom firmware, game launching, game configuration, emulators, and system configuration.",
+
+games: "For downloading games we recommends:",
+games1: "Or website:",
+
+fq_q: "Is it safe to modded a PS5?",
+fq_a: "Depends on the system version.",
+fq_q1: "How and where to download games that are available for download with a license?",
+fq_a1: "You can find the games for download above the FAQ, but you need to modify your console, which we will help you do on our Discord.♡",
+
+main: "← Back to the main page",
+pirat: "We do not encourage piracy. We only assist with hardware modifications.",
+wrong: "We are not responsible for incorrect hardware modifications. We provide informational assistance only.",
+modded: "⚠️ Modifications are your own responsibility. We do not support piracy.",
+
+info_cookie: "The Retro Games website uses cookies solely for statistical purposes (Google Analytics). The data is anonymous and does not identify the user.",
+
+
     
 
   }
