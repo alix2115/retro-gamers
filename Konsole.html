@@ -2,11 +2,7 @@
 <html lang="pl">
 <head>
 
-<link rel="icon" sizes="32x32" href="/favicon.png">
-<link rel="icon" sizes="192x192" href="/favicon.png">
-<link rel="apple-touch-icon" href="/favicon.png">
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="stylesheet" href="style.css">
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VPGM4CQR1Q"></script>
@@ -20,365 +16,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Retro Games - Przerabianie Konsol</title>
-    <style>
-.consoles {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-details {
-  background: #0b0b0b;
-  border-radius: 12px;
-  padding: 14px;
-  margin-bottom: 14px;
-  border: 1px solid #00ffd5;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 18px;
-  color: #00ffd5;
-}
-
-details ul {
-  margin-top: 10px;
-  padding-left: 20px;
-}
-
-details li {
-  margin-bottom: 6px;
-  color: #e0e0e0;
-}
-
-.warning {
-  border: 2px solid #ffcc00;
-  background: #1a1400;
-  padding: 15px;
-  border-radius: 10px;
-  color: #ffcc00;
-  box-shadow: 0 0 15px rgba(255,204,0,0.5);
-}
-
-.navbar {
-  background: #0b0b0b;
-  border-bottom: 2px solid #00ffcc;
-  box-shadow: 0 0 15px #00ffcc;
-}
-
-.nav-links a {
-  color: #e0e0e0;
-  transition: 0.3s;
-}
-
-.nav-links a:hover {
-  color: #00ffcc;
-  text-shadow: 0 0 8px #00ffcc;
-}
-
-/* RESET */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, sans-serif;
-}
-
-/* TŁO STRONY */
-body {
-  background: radial-gradient(circle at top, #111 0%, #000 70%);
-  color: #e0e0e0;
-  min-height: 100vh;
-}
-
-/* KONTENER */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 30px 20px;
-}
-
-/* NAGŁÓWKI */
-h1, h2, h3 {
-  color: #00ffcc;
-  text-shadow: 0 0 8px #00ffcc;
-  margin-bottom: 15px;
-}
-
-/* PARAGRAFY */
-p {
-  line-height: 1.6;
-  margin-bottom: 10px;
-}
-
-.trivia {
-  display:flex;
-  flex-wrap:wrap;
-  gap:15px;
-  justify-content:center;
-}
-
-.trivia-item {
-  background:#1c1c1c;
-  border:2px solid #00ff80;
-  border-radius:10px;
-  padding:15px;
-  width:250px;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.trivia-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 0 15px #00ff80;
-}
-
-.trivia-item h3 {
-  color:#00ff80;
-  margin-top:0;
-}
-
-.trivia-item p {
-  margin:5px 0 0 0;
-  font-size:14px;
-  line-height:1.4;
-}
-
-/* RESPONSYWNE */
-@media(max-width:768px){
-  .trivia-item { width:100%; }
-}
-
-/* Navbar */
-.navbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  background:#222;
-  padding:15px 20px;
-  position:relative;
-}
-
-.logo-nav {
-  color:#00ff80;
-  font-size:22px;
-  font-weight:bold;
-}
-
-.nav-links a {
-  color:#eee;
-  text-decoration:none;
-  margin-left:20px;
-  font-size:18px;
-}
-
-.nav-links a:hover {
-  color:#00d4ff;
-}
-
-/* Hamburger */
-.hamburger {
-  display:none;
-  font-size:28px;
-  cursor:pointer;
-  color:white;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-  .hamburger { display:block; }
-  .nav-links {
-    display:none;
-    flex-direction:column;
-    width:100%;
-    background:#222;
-    position:absolute;
-    top:65px;
-    left:0;
-    z-index:10;
-  }
-  .nav-links a {
-    padding:15px;
-    border-top:1px solid #333;
-    margin:0;
-  }
-  .nav-links.show {
-    display:flex;
-  }
-}
-
-.faq-btn {
-  background-color:#222;
-  color:#00ff80;
-  cursor:pointer;
-  padding:14px 20px;
-  width:100%;
-  text-align:left;
-  border:none;
-  outline:none;
-  font-size:18px;
-  transition:0.3s;
-  margin-top:5px;
-  border-left:5px solid #00ff80;
-}
-
-.faq-btn:hover {
-  background-color:#111;
-}
-
-.faq-panel {
-  padding:0 20px;
-  display:none;
-  background-color:#1c1c1c;
-  overflow:hidden;
-}
-
-.faq-panel p {
-  margin:10px 0;
-}
-
-.accordion-btn {
-  background-color:#222;
-  color:#00ff80;
-  cursor:pointer;
-  padding:14px 20px;
-  width:100%;
-  text-align:left;
-  border:none;
-  outline:none;
-  font-size:18px;
-  transition:0.3s;
-  margin-top:5px;
-  border-left:5px solid #00ff80;
-}
-
-.accordion-btn:hover {
-  background-color:#111;
-}
-
-.panel {
-  padding:0 20px;
-  display:none;
-  background-color:#1c1c1c;
-  overflow:hidden;
-}
-
-.panel p {
-  margin:10px 0;
-}
-
-        body {
-            background-color: #111;
-            color: #eee;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #222;
-            text-align: center;
-            padding: 30px 10px;
-            border-bottom: 3px solid #444;
-        }
-
-        header h1 {
-            font-size: 42px;
-            color: #00ff80;
-            text-shadow: 0 0 10px #00ff80;
-        }
-
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        h2 {
-            color: #00d4ff;
-            text-shadow: 0 0 6px #00d4ff;
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            background-color: #1c1c1c;
-            margin: 10px 0;
-            padding: 15px;
-            border-left: 5px solid #00ff80;
-            font-size: 18px;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 22px;
-            background-color: #00d4ff;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-
-        .back-btn:hover {
-            background-color: #00aacc;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-            color: #777;
-            border-top: 1px solid #333;
-        }
-    
-/* ===== WERSJA MOBILNA ===== */
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 32px;
-    }
-
-    .container {
-        padding: 15px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    p, li {
-        font-size: 16px;
-    }
-
-    .discord-btn, .back-btn {
-        width: 100%;
-        text-align: center;
-        font-size: 18px;
-        padding: 14px;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-        font-size: 18px;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-</style>
 </head>
 <body>
 <div id="cookieBanner" style="
@@ -393,30 +30,37 @@ p {
   display: none;
   z-index: 9999;
 ">
- <p data-i18n="cookies">Ta strona używa plików cookie do celów statystycznych.</p>
-  <button onclick="acceptCookies()" data-i18n="accept">Akceptuję</button>
-  <button onclick="rejectCookies()" data-i18n="reject">Odrzuć</button>
+  Ta strona używa plików cookie do celów statystycznych.
+  <button onclick="acceptCookies()">Akceptuję</button>
+  <button onclick="rejectCookies()">Odrzuć</button>
 </div>
 
 
 <header>
-<nav class="navbar">
-  <div class="logo-nav">Retro Games</div>
+ <nav class="ps-nav">
   <div class="hamburger" onclick="toggleMenu()">☰</div>
-  <div class="nav-links" id="navLinks">
-      <a href="https://alix2115.github.io/retro-gamers/" data-i18n="nav_home">Strona główna</a>
-      <a href="https://discord.gg/QnH47cRewR" target="_blank">Discord</a>
-      <a><button onclick="setLanguage('pl')" style="background-color:blue; color:white;">PL</button> <button onclick="setLanguage('en')" style="background-color:blue; color:white;">EN</button></a>
 
-  </div>
+  <div class="ps-logo">Retro Gamers</div>
+
+  <ul class="ps-menu" id="navLinks">
+    <li><a href="index.html" data-i18n="nav_consoles">Strona główna</a></li>
+    <li><a href="Homebrew.html">Homebrew</a></li>
+    <li><a href="https://discord.gg/NKk6gVtdFC" data-i18n="nav_discord"target="_blank">Discord</a></li>
+    <li><button onclick="setLanguage('pl')" style="background-color:blue; color:white;">PL</button> <button onclick="setLanguage('en')" style="background-color:blue; color:white;">EN</button></li>
+
+  </ul>
 </nav>
-    <h1 data-i18n="consoles_title">Przerabianie Konsol</h1>
+
 </header>
 
-<div class="container">
-    <h2 data-i18n="what_consoles">Jakie konsole potrafimy przerobić?</h2>
+ <div class="hero">
+    <h1 class="rgb-text">Przerabianie Konsol</h1>
 
-    <p data-i18n="modify_info">W społeczności <strong>Retro Games</strong> pomagamy w modyfikacji konsol PlayStation — zarówno starszych, jak i nowszych generacji.</p>
+
+<div class="container">
+    <h2>Jakie konsole potrafimy przerobić?</h2>
+
+    <p>W społeczności <strong>Retro Gamers</strong> pomagamy w modyfikacji konsol PlayStation — zarówno starszych, jak i nowszych generacji.</p>
   <div>     
     <img src="ps1.png" width="100" height=100;>
     <img src="ps2.png" width="100" height="100">
@@ -427,58 +71,58 @@ p {
     <img src="ps5.png" width="100" height="100">
   </div>
 <ul>
-  <li data-i18n="safe">🟢 Bezpieczna</li>
-  <li data-i18n="partial">🟡 Częściowa</li>
-  <li data-i18n="limited">🔴 Ograniczona</li>
+  <li>🟢 Bezpieczna</li>
+  <li>🟡 Częściowa</li>
+  <li>🔴 Ograniczona</li>
 </ul>
 
-<h2 data-i18n="consoles_desc">Przeróbki konsol</h2>
+<h2>Przeróbki konsol</h2>
 
 <div class="accordion">
   <button class="accordion-btn">PS1</button>
   <div class="panel">
-    <p data-i18n="ps1">Status: 🟢 Bezpieczna przeróbka</p>
-    <p data-i18n="ps1_method">Metody: softmod, uruchamianie gier z kopii zapasowych.</p>
+    <p>Status: 🟢 Bezpieczna przeróbka</p>
+    <p>Metody: softmod, uruchamianie gier z kopii zapasowych.</p>
   </div>
 
   <button class="accordion-btn">PS2</button>
   <div class="panel">
-    <p data-i18n="ps2">Status: 🟢 Bezpieczna przeróbka</p>
-    <p data-i18n="ps2_method">Metody: FreeMCBoot, OPL, gry z USB/HDD.</p>
+    <p>Status: 🟢 Bezpieczna przeróbka</p>
+    <p>Metody: FreeMCBoot, OPL, gry z USB/HDD.</p>
   </div>
 
   <button class="accordion-btn">PS3</button>
   <div class="panel">
-    <p data-i18n="ps3">Status: 🟢 Bezpieczna przeróbka</p>
-    <p data-i18n="ps3_method">Metody: Custom firmware, backup gier, emulator retro.</p>
+    <p>Status: 🟢 Bezpieczna przeróbka</p>
+    <p>Metody: Custom firmware, backup gier, emulator retro.</p>
   </div>
 
   <button class="accordion-btn">PSP</button>
   <div class="panel">
-    <p data-i18n="psp">Status: 🟢 Bezpieczna przeróbka</p>
-    <p data-i18n="psp_method">Metody: custom firmware, uruchamianie kopii gier z karty pamięci.</p>
+    <p>Status: 🟢 Bezpieczna przeróbka</p>
+    <p>Metody: custom firmware, uruchamianie kopii gier z karty pamięci.</p>
   </div>
 
   <button class="accordion-btn">PS Vita</button>
   <div class="panel">
-    <p data-i18n="psv">Status: 🟡 Częściowa przeróbka</p>
-    <p data-i18n="psv_method">Metody: HENkaku, uruchamianie homebrew i emulatorów retro.</p>
+    <p>Status: 🟡 Częściowa przeróbka</p>
+    <p>Metody: HENkaku, uruchamianie homebrew i emulatorów retro.</p>
   </div>
 
   <button class="accordion-btn">PS4</button>
   <div class="panel">
-    <p data-i18n="ps4">Status: 🟡 Częściowa przeróbka</p>
-    <p data-i18n="ps4_method">Ograniczenia: nowe aktualizacje systemu mogą blokować przeróbki.</p>
+    <p>Status: 🟡 Częściowa przeróbka</p>
+    <p>Ograniczenia: nowe aktualizacje systemu mogą blokować przeróbki.</p>
   </div>
 
   <button class="accordion-btn">PS5</button>
   <div class="panel">
-    <p data-i18n="ps5">Status: 🔴 Ograniczona przeróbka</p>
-    <p data-i18n="ps5_method">Przeróbki są eksperymentalne i niezalecane.</p>
+    <p>Status: 🔴 Ograniczona przeróbka</p>
+    <p>Przeróbki są eksperymentalne i niezalecane.</p>
   </div>
 </div>
 <section class="consoles">
-  <h2 class="rgb-text" data-i18n="ps_models_title">Obsługiwane konsole</h2>
+  <h2>Obsługiwane konsole</h2>
 
   <details>
     <summary>🎮 PlayStation 1 (PS1)</summary>
@@ -507,7 +151,7 @@ p {
       <li>SCPH-75000</li>
       <li>SCPH-77000</li>
       <li>SCPH-79000</li>
-      <li>SCPH-90000 <strong data-i18n="selected">(wybrane wersje)</strong></li>
+      <li>SCPH-90000 (wybrane wersje)</li>
     </ul>
   </details>
 
@@ -560,108 +204,105 @@ p {
 
 </section>
 
-<h2 data-i18n="facts">Ciekawostki o konsolach</h2>
+<h2>Ciekawostki o konsolach</h2>
 
 <div class="trivia">
   <div class="trivia-item">
     <h3>PS1</h3>
-    <p data-i18n="facts_ps1">PlayStation pierwotnie nie miało powstać – Sony współpracowało z Nintendo przy projekcie SNES-CD, ale projekt upadł, a Sony stworzyło własną konsolę.</p>
+    <p>PlayStation pierwotnie nie miało powstać – Sony współpracowało z Nintendo przy projekcie SNES-CD, ale projekt upadł, a Sony stworzyło własną konsolę.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS2</h3>
-    <p data-i18n="facts_ps2">PS2 jest najlepiej sprzedającą się konsolą w historii – ponad 155 milionów sztuk na całym świecie!</p>
+    <p>PS2 jest najlepiej sprzedającą się konsolą w historii – ponad 155 milionów sztuk na całym świecie!</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS3</h3>
-    <p data-i18n="facts_ps3">PS3 miało kosztować prawie 600 dolarów przy premierze w USA – jedna z najdroższych konsol na start.</p>
+    <p>PS3 miało kosztować prawie 600 dolarów przy premierze w USA – jedna z najdroższych konsol na start.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PSP</h3>
-    <p data-i18n="facts_psp">PSP było pierwszą przenośną konsolą Sony z możliwością odtwarzania filmów UMD.</p>
+    <p>PSP było pierwszą przenośną konsolą Sony z możliwością odtwarzania filmów UMD.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS Vita</h3>
-    <p data-i18n="facts_psv">PS Vita posiadała dwa analogowe drążki – jedyne wśród przenośnych konsol Sony.</p>
+    <p>PS Vita posiadała dwa analogowe drążki – jedyne wśród przenośnych konsol Sony.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS4</h3>
-    <p data-i18n="facts_ps4">PS4 początkowo nie obsługiwało wstecznej kompatybilności z grami z PS3 – wymagało emulacji lub streamingu.</p>
+    <p>PS4 początkowo nie obsługiwało wstecznej kompatybilności z grami z PS3 – wymagało emulacji lub streamingu.</p>
   </div>
   
   <div class="trivia-item">
     <h3>PS5</h3>
-    <p data-i18n="facts_ps5">PS5 posiada ultrawydajny dysk SSD, który skraca czas ładowania gier do minimum.</p>
+    <p>PS5 posiada ultrawydajny dysk SSD, który skraca czas ładowania gier do minimum.</p>
   </div>
 </div>
 
-  <h2 data-i18n="qa_title">Q&A</h2>
+  <h2>Q&A / FAQ</h2>
 <div class="faq-accordion">
-  <button class="faq-btn" data-i18n="qa_q1">Czy mogę uszkodzić konsolę podczas przeróbki?</button>
+  <button class="faq-btn">Czy mogę uszkodzić konsolę podczas przeróbki?</button>
   <div class="faq-panel">
-    <p data-i18n="qa_a1">Tak, istnieje ryzyko, dlatego zawsze zalecamy dokładne instrukcje i wykonywanie przeróbek tylko zgodnie z poradnikami. Nie odpowiadamy za uszkodzenia sprzętu.</p>
+    <p>Tak, istnieje ryzyko, dlatego zawsze zalecamy dokładne instrukcje i wykonywanie przeróbek tylko zgodnie z poradnikami. Nie odpowiadamy za uszkodzenia sprzętu.</p>
   </div>
 
-  <button class="faq-btn" data-i18n="qa_q2">Czy przeróbki są legalne?</button>
+  <button class="faq-btn">Czy przeróbki są legalne?</button>
   <div class="faq-panel">
-    <p data-i18n="qa_a2">Przeróbki sprzętowe są legalne, jeśli nie obejmują nielegalnego oprogramowania lub pirackich gier. Pomagamy wyłącznie w modyfikacji sprzętu i homebrew.</p>
+    <p>Przeróbki sprzętowe są legalne, jeśli nie obejmują nielegalnego oprogramowania lub pirackich gier. Pomagamy wyłącznie w modyfikacji sprzętu i homebrew.</p>
   </div>
 
-  <button class="faq-btn" data-i18n="qa_q3">Czy mogę online korzystać z przerobionej konsoli?</button>
+  <button class="faq-btn">Czy mogę online korzystać z przerobionej konsoli?</button>
   <div class="faq-panel">
-    <p data-i18n="qa_a3">Nie zawsze – niektóre modyfikacje mogą zostać wykryte przez sieć i prowadzić do ograniczeń online. Zalecamy sprawdzanie aktualnych zasad producenta.</p>
+    <p>Nie zawsze – niektóre modyfikacje mogą zostać wykryte przez sieć i prowadzić do ograniczeń online. Zalecamy sprawdzanie aktualnych zasad producenta.</p>
   </div>
 
-  <button class="faq-btn" data-i18n="qa_q4">Jak mogę dowiedzieć się więcej?</button>
+  <button class="faq-btn">Jak mogę dowiedzieć się więcej?</button>
   <div class="faq-panel">
-    <p data-i18n="qa_a4">Dołącz do naszego Discorda, gdzie udostępniamy poradniki, instrukcje i pomoc od społeczności.</p>
+    <p>Dołącz do naszego Discorda, gdzie udostępniamy poradniki, instrukcje i pomoc od społeczności.</p>
   </div>
 </div>
 
 
 
-    <h2 data-i18n="why">Dlaczego my?</h2>
+    <h2>Dlaczego my?</h2>
 <ul>
-  <li data-i18n="doswiadczenie">✔ Doświadczenie</li>
-  <li data-i18n="pomoc">✔ Pomoc community</li>
-  <li data-i18n="brak">✔ Brak opłat</li>
+  <li>✔ Doświadczenie</li>
+  <li>✔ Pomoc community</li>
+  <li>✔ Brak opłat</li>
 </ul>
 
-    <h2 data-i18n="donot">Czego nie robimy</h2>
+    <h2>Czego nie robimy</h2>
 <ul>
-  <li data-i18n="sell">❌ Nie sprzedajemy gier</li>
-  <li data-i18n="online">❌ Nie omijamy zabezpieczeń online</li>
+  <li>❌ Nie sprzedajemy gier</li>
+  <li>❌ Nie omijamy zabezpieczeń online</li>
 </ul>
-<h2 data-i18n="process">Jak wygląda proces?</h2>
+<h2>Jak wygląda proces?</h2>
 <ol>
-  <li data-i18n="st">Kontakt na Discordzie</li>
-  <li data-i18n="nd">Sprawdzenie wersji systemu</li>
-  <li data-i18n="rd">Instrukcja krok po kroku</li>
+  <li>Kontakt na Discordzie</li>
+  <li>Sprawdzenie wersji systemu</li>
+  <li>Instrukcja krok po kroku</li>
 </ol>
 
 
-   <p data-i18n="config">Pomagamy z softmodem, custom firmware, uruchamianiem gier, konfiguracją gier, emulatorami oraz konfiguracją systemu.</p>
-    <p><b data-i18n="games">Do pobierania gier polecamy stronke</b> <a href="https://cdromance.org/">CDromance</a></p>
-    <p><b data-i18n="games1">Albo stronke</b> <a href="https://vimm.net/vault">Tha Vault</a></p>
+   <p>Pomagamy z softmodem, custom firmware, uruchamianiem gier, konfiguracją gier, emulatorami oraz konfiguracją systemu.</p>
+    <p>Do pobierania gier polecamy stronke <a href="https://cdromance.org/">CDromance</a></p>
+    <p>Albo stronke <a href="https://vimm.net/vault">Tha Vault</a></p>
     <h2>FAQ</h2>
-<p><strong data-i18n="fq_q">Czy przeróbka PS5 jest bezpieczna?</strong></p>
-<p data-i18n="qa_a">Zależy od wersji systemu.</p>
-<br><br>
-<p><strong data-i18n="fq_q1">Jak i skąd pobrać gry które są możliwe do pobrania z licencją?</strong></p>
-<p data-i18n="fq_a1">Gry do pobrania znajdziesz nad napisem FAQ lecz potrzebna jest przeróbka konsoli którą pomożemy ci zrobić na naszym discordzie.♡</p>
+<p><strong>Czy przeróbka PS5 jest bezpieczna?</strong><br>
+Zależy od wersji systemu.</p>
 
-    <a class="back-btn" href="https://alix2115.github.io/retro-gamers/" style="background-color:purple; color:white;" data-i18n="main">← Powrót do strony głównej</a>
-<p><small data-i18n="pirat">
+    <a class="back-btn" href="index.html" style="background-color:purple; color:white;">← Powrót do strony głównej</a>
+<p><small>
 Nie zachęcamy do piractwa. Pomagamy wyłącznie w modyfikacji sprzętu.
 </small></p>
-<p><small data-i18n="wrong">
+<p><small>
 Nie odpowiadamy za błędne modyfikacje sprzętu. Pomagamy wyłącznie informacyjnie.
 </small></p>
-<div class="warning" data-i18n="modded">
+<div class="warning">
 ⚠️ Przeróbki wykonujesz na własną odpowiedzialność. Nie wspieramy piractwa.
 </div>
 
@@ -670,17 +311,14 @@ Nie odpowiadamy za błędne modyfikacje sprzętu. Pomagamy wyłącznie informacy
 </div>
 
 <footer>
-    © 2025 Retro Games — Console Mods
-<h1 data-i18n="privacy_title">Polityka prywatności</h1>
-<p data-i18n="info_cookie">
+    © 2025 Retro Gamers — Przerabianie Konsol
+<h1>Polityka prywatności</h1>
+<p>
 Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych
 (Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.
 </p>
 
 </footer>
-
-<script src="i18n.js"></script>
-
 <script>
 const acc = document.getElementsByClassName("accordion-btn");
 for(let i=0;i<acc.length;i++){
@@ -753,7 +391,29 @@ window.onload = () => {
   }
 };
 </script>
+<script>
 
+const acc = document.querySelectorAll(".accordion-btn");
+
+acc.forEach(button => {
+
+button.addEventListener("click", function(){
+
+this.classList.toggle("active");
+
+const panel = this.nextElementSibling;
+
+if(panel.style.display === "block"){
+panel.style.display = "none";
+}else{
+panel.style.display = "block";
+}
+
+});
+
+});
+
+</script>
 
 </body>
 </html>

@@ -48,7 +48,7 @@ const translations = {
     
 
     privacy_title: "Polityka prywatności",
-    privacy_text: "Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych.",
+    privacy_text: "Strona Retro Gamers wykorzystuje pliki cookie wyłącznie do celów statystycznych.",
 
 
     // === KONSOLE ===
@@ -131,7 +131,8 @@ pirat: "Nie zachęcamy do piractwa. Pomagamy wyłącznie w modyfikacji sprzętu.
 wrong: "Nie odpowiadamy za błędne modyfikacje sprzętu. Pomagamy wyłącznie informacyjnie.",
 modded: "⚠️ Przeróbki wykonujesz na własną odpowiedzialność. Nie wspieramy piractwa.",
 
-info_cookie: "Strona Retro Games wykorzystuje pliki cookie wyłącznie do celów statystycznych (Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.",
+info_cookie: "Strona Retro Gamers wykorzystuje pliki cookie wyłącznie do celów statystycznych (Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.",
+
 
 
    
@@ -267,7 +268,8 @@ pirat: "We do not encourage piracy. We only assist with hardware modifications."
 wrong: "We are not responsible for incorrect hardware modifications. We provide informational assistance only.",
 modded: "⚠️ Modifications are your own responsibility. We do not support piracy.",
 
-info_cookie: "The Retro Games website uses cookies solely for statistical purposes (Google Analytics). The data is anonymous and does not identify the user.",
+info_cookie: "The Retro Gamers website uses cookies solely for statistical purposes (Google Analytics). The data is anonymous and does not identify the user.",
+
 
 
     

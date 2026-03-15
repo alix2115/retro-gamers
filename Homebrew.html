@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="icon" sizes="32x32" href="/favicon.png">
+<link rel="icon" sizes="192x192" href="/favicon.png">
+<link rel="apple-touch-icon" href="/favicon.png">
+<link rel="icon" type="image/png" href="logo.png">
+
+<!-- Open Graph (Google, Discord, Facebook) -->
+<meta property="og:title" content="Retro Gamers - Polish Street Simulator Community">
+<meta property="og:description" content="Oficjalna społeczność Polish Street Simulator. Retro klimat, konsole, tuning i community.">
+<meta property="og:image" content="https://alix2115.github.io/retro-gamers/logo.png">
+<meta property="og:url" content="https://alix2115.github.io/retro-gamers/">
+<meta property="og:type" content="website">  
+
+
+<meta name="description" content="Retro Gamers – polska społeczność retro gier, Polish Street Simulator, przerabianie konsol PS1–PS5, Discord community.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VPGM4CQR1Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VPGM4CQR1Q');
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Retro Games - Polish Street Simulator Community</title>
+    
+
+</head>
+<body>
+<header>
+ <nav class="ps-nav">
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+  <div class="ps-logo">Retro Gamers</div>
+
+  <ul class="ps-menu" id="navLinks">
+    <li><a href="index.html" data-i18n="nav_home">Strona główna</a></li>
+    <li><a href="Konsole.html" data-i18n="nav_consoles">Konsole</a></li>
+    <li><a href="https://discord.gg/NKk6gVtdFC" data-i18n="nav_discord"target="_blank">Discord</a></li>
+    <li><button onclick="setLanguage('pl')" style="background-color:blue; color:white;">PL</button> <button onclick="setLanguage('en')" style="background-color:blue; color:white;">EN</button></li>
+
+  </ul>
+</nav>
+
+</header>
+<div class="hero">
+  <h1 class="rgb-text">Homebrew</h1>
+
+ <br><br>
+
+<div class="search-container">
+<input type="text" id="searchInput" onkeyup="searchHomebrew()" placeholder="Search homebrew...">
+</div>
+
+<h4>Na tej stronie będą znajdować się różne pliki oraz aplikacje homebrew które pomogą ci ulepszyć twoją konsole!</h4>
+
+<div class="homebrew-list">
+
+<div class="homebrew-card">
+<span class="console">🎮 PS3</span>
+<h3>MultiMan</h3>
+<p>Manager plików i gier dla PS3.</p>
+<a href="homebrew/multiman.pkg" download class="download-btn">⬇ Download</a>
+</div>
+
+<div class="homebrew-card">
+<span class="console">🎮 PS2</span>
+<h3>OPL</h3>
+<p>Loader gier z USB lub HDD.</p>
+<a href="homebrew/opl.zip" download class="download-btn">⬇ Download</a>
+</div>
+
+<div class="homebrew-card">
+<span class="console">🎮 PSP</span>
+<h3>RetroArch</h3>
+<p>Emulator wielu konsol.</p>
+<a href="homebrew/retroarch.zip" download class="download-btn">⬇ Download</a>
+</div>
+
+<div class="homebrew-card">
+<span class="console">🎮 PS1</span>
+<h3>Chip</h3>
+<p>Montaż chipa dla ps1.</p>
+<a href="homebrew/chip-ps1.zip" download class="download-btn">⬇ Download</a>
+</div>
+
+</div>
+<br><br>
+
+    <a class="discord-btn" data-i18n="join_discord" href="https://discord.gg/NKk6gVtdFC" target="_blank">
+        Dołącz na Discord
+    </a>
+
+
+<br><br>
+
+<footer>
+     © 2025 Retro Gamers — Homebrew
+</footer>
+<h1 data-i18n="privacy_title">Polityka prywatności</h1>
+<p data-i18n="privacy_text">
+Strona Retro Gamers wykorzystuje pliki cookie wyłącznie do celów statystycznych
+(Google Analytics). Dane są anonimowe i nie służą do identyfikacji użytkownika.
+</p>
+
+<script src="i18n.js"></script>
+
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("active");
+}
+
+// aktywna strona
+const links = document.querySelectorAll(".ps-menu a");
+const current = location.pathname.split("/").pop();
+
+links.forEach(link => {
+  if (
+    link.getAttribute("href") === current ||
+    (current === "" && link.getAttribute("href") === "index.html")
+  ) {
+    link.classList.add("active");
+  }
+});
+</script>
+<script>
+function acceptCookies() {
+  document.cookie = "stats_cookies=true; max-age=" + 60*60*24*365 + "; path=/";
+  document.getElementById("cookieBanner").style.display = "none";
+  loadAnalytics();
+}
+
+function hasConsent() {
+  return document.cookie.includes("stats_cookies=true");
+}
+
+function loadAnalytics() {
+  const script = document.createElement("script");
+  script.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX";
+  script.async = true;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P8HGCC01F4');
+}
+
+window.onload = () => {
+  if (hasConsent()) {
+    loadAnalytics();
+  } else {
+    document.getElementById("cookieBanner").style.display = "block";
+  }
+};
+</script>
+<script>
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".homebrew-card");
+
+searchInput.addEventListener("input", () => {
+  const value = searchInput.value.toLowerCase();
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    card.style.display = text.includes(value) ? "block" : "none";
+  });
+});
+</script>
+
+
+
+</body>
+</html>
